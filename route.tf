@@ -15,3 +15,8 @@ resource "aws_route_table" "testroutepvt" {
     "Name"="SL-Route-Private"
   }
 }
+
+resource "aws_route_table_association" "testpublic_route_association" {
+  route_table_id = aws_route_table.testroute.id
+  subnet_id = aws_subnet.testsubnet1.id
+}
