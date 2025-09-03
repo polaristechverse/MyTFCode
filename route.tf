@@ -21,7 +21,7 @@ resource "aws_route_table_association" "testpublic_route_association" {
   subnet_id = aws_subnet.testsubnet1.id
 }
 
-resource "aws_route_table_association" "testpublic_route_association_private" {
-  route_table_id = aws_route_table.testroutepvt.id
+resource "aws_route_table_association" "testpublic_route_association_2" {
+  route_table_id = aws_route_table.testroute.id
   subnet_id = aws_subnet.testsubnet2.id
 }
