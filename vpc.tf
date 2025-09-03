@@ -31,3 +31,12 @@ resource "aws_subnet" "testsubnet2" {
   }
 }
 
+resource "aws_subnet" "testsubnet4" {
+  vpc_id                  = aws_vpc.testvpc.id
+  cidr_block              = "10.100.4.0/24"
+  availability_zone       = "us-east-1d"
+  map_public_ip_on_launch = true
+  tags = {
+    "Name" = "sl-subnet-4"
+  }
+}
