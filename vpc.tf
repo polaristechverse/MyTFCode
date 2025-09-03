@@ -40,3 +40,13 @@ resource "aws_subnet" "testsubnet3" {
     "Name" = "sl-subnet-3"
   }
 }
+
+resource "aws_subnet" "testsubnet6" {
+  vpc_id                  = aws_vpc.testvpc.id
+  cidr_block              = "10.100.6.0/24"
+  availability_zone       = "us-east-1f"
+  map_public_ip_on_launch = true
+  tags = {
+    "Name" = "sl-subnet-6"
+  }
+}
